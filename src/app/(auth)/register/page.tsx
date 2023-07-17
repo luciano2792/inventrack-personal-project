@@ -5,7 +5,7 @@ export default function Register () {
     
     return (
         <div className="flex min-h-screen items-center justify-center">
-            <div className="bg-gray-500 py-24 px-20 rounded-xl w-1/4 ">
+            <div className="bg-gray-300 py-24 px-20 rounded-xl w-1/4 ">
                 <h3 className="text-3xl pb-10">Register now</h3>
                 <form action="">
                     <div className="flex justify-between">
