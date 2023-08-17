@@ -35,3 +35,43 @@ export const signin = async (user: object) => {
     body: user
   });
 };
+
+export const createInventory = async (data: object) => {
+  return fetcher({
+    url: "/api/inventory/create",
+    method: "POST",
+    body: data
+  });
+}
+
+export const updateInventory = async (data: object) => {
+  return fetcher({
+    url: "/api/inventory/update",
+    method: "POST",
+    body: data
+  });
+}
+
+export const getInventory = async (data: object) => {
+  return fetcher({
+    url: "/api/inventory/get",
+    method: "POST",
+    body: data
+  });
+}
+
+export const getInventories = async (data: object) => {
+  return fetcher({
+    url: "/api/inventory/getMany",
+    method: "POST",
+    body: data
+  });
+}
+
+export const deleteInventory = async (data: object) => {
+  return fetcher({
+    url: "/api/inventory/delete",
+    method: "POST",
+    body: data
+  });
+}

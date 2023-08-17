@@ -10,13 +10,13 @@ export default async function signin(
     if (req.method === "POST") {
       const user = await db.user.findUnique({
         where: {
-          email: req.body.email,
+          username: req.body.username,
         },
       });
   
       if (!user) {
         res.status(401);
-        res.json({ error: "Invalid login" });
+        res.json({ error: "This username doesn't exist! " });
         return;
       }
   

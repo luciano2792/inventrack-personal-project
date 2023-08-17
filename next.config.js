@@ -16,3 +16,22 @@ const nextConfig = {
 }}
 
 module.exports = nextConfig
+
+module.exports = {
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'inventrackpfp.s3.amazonaws.com',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'inventrackinventorypfp.s3.amazonaws.com',
+          port: '',
+          pathname: '/**',
+        },
+      ],
+    },
+  }
