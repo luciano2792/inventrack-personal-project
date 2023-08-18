@@ -67,32 +67,35 @@ const NewInventory = () => {
         <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        overlayClassName="bg-[rgba(0,0,0,.4)] flex justify-center items-center absolute top-0 left-0 h-screen w-screen"
-        className="w-3/4 bg-white rounded-xl p-8"
+        overlayClassName="bg-[rgba(0,0,0,.5)] flex justify-center items-center absolute top-0 left-0 h-screen w-screen"
+        className="w-1/3 bg-white rounded-xl p-8"
         >
-        <h1 className="text-3xl mb-6">New Project</h1>
+        <h1 className="text-3xl mb-6 text-center">New Project</h1>
         <form onSubmit={handleSubmit}>
-            <label>Title</label>
+            <label className="block text-xl">Title</label>
             <input
             type="text"
-            placeholder="Title"
             value={title}
+            placeholder="Set a title for your inventory"
+            className="py-1 px-2 mt-1 mb-5 w-full bg-gray-200 border border-black rounded-2xl text-black"
             onChange={(e) => setTitle(e.target.value)}
             />
-            <label>Description</label>
+            <label className="block text-xl">Description</label>
             <input
             type="text"
-            placeholder="Title"
+            placeholder="Set a description"
             value={description}
+            className="py-1 px-2 mt-1 mb-5 w-full bg-gray-200 border border-black rounded-2xl text-black"
             onChange={(e) => setDescription(e.target.value)}
             />
-            <label>Set profile picture for your new inventory</label>
+            <label className="block text-xl mb-3">Set profile picture for your new inventory</label>
             <input
             type="file"
+            className="block"
             onChange={(e) => {selectFile(e)}}
             />
             {file && <Image src={URL.createObjectURL(file)} width={200} height={100} alt='image' />}
-            <button type="submit">Create</button>
+            <button type="submit" className="block mx-auto px-6 py-2 bg-zinc-300 mt-3 text-xl border border-gray-600 hover:bg-zinc-400 rounded-full">Create</button>
         </form>
         </Modal>
     </div>

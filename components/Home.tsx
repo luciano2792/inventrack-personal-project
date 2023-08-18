@@ -33,15 +33,15 @@ export default async function Home () {
 
     return (
     <>
-      <div className="flex min-h-screen justify-items-stretch p-24">
+      <div className="flex min-h-screen justify-items-stretch">
         <div>
           <Sidebar />
         </div>
-        <div className="w-full px-12">
+        <div className="w-full px-12 pt-24">
           <div className="flex justify-between w-full">
             <h1 className="text-6xl">InvenTrack</h1>
             <div className="flex justify-between items-center">
-              <Image className="" src={user?.profilePictureURL} height={20} width={25} alt="user"></Image>
+              <Image src={user?.profilePictureURL} height={20} width={25} alt="user"></Image>
               <p>Log out</p>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default async function Home () {
           <div>
             <NewInventoryModal />
           </div>
-          <div className="flex w-full flex-wrap justify-between">
+          <div className="flex flex-wrap justify-start">
             {
               inventories.map((inventory: any) => (
                   <OverviewInventory key={inventory.id} inventoryProfilePicture={inventory.inventoryProfilePictureURL} 
